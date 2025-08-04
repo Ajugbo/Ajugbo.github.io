@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AgriVision NG - Own Your Farm, Control Your Supply</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+        
+        .hero-gradient {
+            background: linear-gradient(135deg, #22c55e 0%, #16a34a 50%, #15803d 100%);
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-5px);
+            transition: all 0.3s ease;
+        }
+        
+        .btn-primary {
+            background: linear-gradient(to right, #22c55e, #16a34a);
+            color: white;
+            padding: 12px 30px;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(34, 197, 94, 0.3);
+        }
+        
+        .step-icon {
+            width: 60px;
+            height: 60px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+        }
+    </style>
+</head>
+<body class="bg-white text-gray-800">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg fixed w-full z-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center">
+                    <span class="text-2xl font-bold text-green-600">AgriVision<span class="text-green-800">NG</span></span>
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-8">
+                        <a href="#home" class="text-green-700 hover:text-green-900 px-3 py-2 text-sm font-medium">Home</a>
+                        <a href="#how-it-works" class="text-gray-700 hover:text-green-700 px-3 py-2 text-sm font-medium">How It Works</a>
+                        <a href="#features" class="text-gray-700 hover:text-green-700 px-3 py-2 text-sm font-medium">Features</a>
+                        <a href="#contact" class="text-gray-700 hover:text-green-700 px-3 py-2 text-sm font-medium">Contact</a>
+                    </div>
+                </div>
+                <div class="md:hidden">
+                    <button class="text-gray-700 hover:text-green-700 focus:outline-none">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-gradient text-white pt-24 pb-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col lg:flex-row items-center">
+                <div class="lg:w-1/2 mb-10 lg:mb-0">
+                    <h1 class="text-4xl md:text-5xl font-bold mb-6 leading-tight">Own Your Farm,<br><span class="text-yellow-200">Control Your Supply</span></h1>
+                    <p class="text-lg mb-8 text-green-100">Enable businesses and individuals to own and remotely manage farms producing Yam, Cowpeas, Rice, Potatoes, and Maize—scaling production to match your supply needs.</p>
+                    <button class="btn-primary rounded-full shadow-lg">Get Started Today</button>
+                </div>
+                <div class="lg:w-1/2">
+                    <img src="https://placehold.co/600x400/22c55e/ffffff?text=AgriVision+Farm+Management" alt="AgriVision Farm Management" class="rounded-lg shadow-2xl">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Crops Section -->
+    <section class="py-16 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">Crops We Manage</h2>
+                <p class="text-gray-600 max-w-3xl mx-auto">We specialize in high-demand crops across Nigeria's prime agricultural belts</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6">
+                <div class="bg-white p-6 rounded-lg shadow-md text-center feature-card">
+                    <div class="w-16 h-16 bg-yellow-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-rooter text-2xl text-yellow-600"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2">Yam</h3>
+                    <p class="text-gray-600">Premium yam production in Nigeria's yam belt</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md text-center feature-card">
+                    <div class="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-seedling text-2xl text-orange-600"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2">Cowpeas</h3>
+                    <p class="text-gray-600">High-protein legume cultivation</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md text-center feature-card">
+                    <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-rice text-2xl text-green-600"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2">Rice</h3>
+                    <p class="text-gray-600">Premium rice production in Nigeria's rice belt</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md text-center feature-card">
+                    <div class="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-pot text-2xl text-purple-600"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2">Potatoes</h3>
+                    <p class="text-gray-600">High-yield potato farming</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md text-center feature-card">
+                    <div class="w-16 h-16 bg-amber-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-corn text-2xl text-amber-600"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2">Maize</h3>
+                    <p class="text-gray-600">Commercial maize cultivation</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works -->
+    <section id="how-it-works" class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">How It Works</h2>
+                <p class="text-gray-600 max-w-3xl mx-auto">Four simple steps to owning and managing your farm remotely</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="text-center feature-card">
+                    <div class="step-icon mx-auto mb-4">
+                        <i class="fas fa-landmark text-2xl text-white"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-3">Farm Ownership</h3>
+                    <p class="text-gray-600">Lease or buy farmland in prime locations across Nigeria's crop belts</p>
+                </div>
+                <div class="text-center feature-card">
+                    <div class="step-icon mx-auto mb-4">
+                        <i class="fas fa-satellite-dish text-2xl text-white"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-3">Remote Management</h3>
+                    <p class="text-gray-600">Monitor via drone footage + AI analytics through our app</p>
+                </div>
+                <div class="text-center feature-card">
+                    <div class="step-icon mx-auto mb-4">
+                        <i class="fas fa-arrows-alt-h text-2xl text-white"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-3">Flexible Production</h3>
+                    <p class="text-gray-600">Adjust acreage/output quarterly to meet your demand</p>
+                </div>
+                <div class="text-center feature-card">
+                    <div class="step-icon mx-auto mb-4">
+                        <i class="fas fa-truck-loading text-2xl text-white"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-3">Direct Harvest Supply</h3>
+                    <p class="text-gray-600">Use yields for your business or sell commercially</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Key Features -->
+    <section id="features" class="py-16 bg-green-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">Key Features</h2>
+                <p class="text-gray-600 max-w-3xl mx-auto">Everything you need to confidently invest in Nigerian agriculture</p>
+            </div>
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-10">
+                <div class="bg-white p-8 rounded-lg shadow-lg">
+                    <h3 class="text-2xl font-bold text-green-700 mb-6">Secure & Protected</h3>
+                    <div class="space-y-6">
+                        <div class="flex">
+                            <div class="flex-shrink-0 mt-1">
+                                <i class="fas fa-check-circle text-green-500 mr-3"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-lg font-semibold text-gray-800">Escrow Financing</h4>
+                                <p class="text-gray-600">Pay into secured accounts; funds released upon milestone verification</p>
+                            </div>
+                        </div>
+                        <div class="flex">
+                            <div class="flex-shrink-0 mt-1">
+                                <i class="fas fa-check-circle text-green-500 mr-3"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-lg font-semibold text-gray-800">Insurance</h4>
+                                <p class="text-gray-600">Crop and equipment coverage from NAICON or Leadway Assurance</p>
+                            </div>
+                        </div>
+                        <div class="flex">
+                            <div class="flex-shrink-0 mt-1">
+                                <i class="fas fa-check-circle text-green-500 mr-3"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-lg font-semibold text-gray-800">Credit Guarantees</h4>
+                                <p class="text-gray-600">BOI/BOA backed loans for qualified buyers (Details TBD)</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white p-8 rounded-lg shadow-lg">
+                    <h3 class="text-2xl font-bold text-green-700 mb-6">Legal Framework</h3>
+                    <div class="space-y-6">
+                        <div class="flex">
+                            <div class="flex-shrink-0 mt-1">
+                                <i class="fas fa-handshake text-green-500 mr-3"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-lg font-semibold text-gray-800">Landowners</h4>
+                                <p class="text-gray-600">Clear lease terms and agreements</p>
+                            </div>
+                        </div>
+                        <div class="flex">
+                            <div class="flex-shrink-0 mt-1">
+                                <i class="fas fa-handshake text-green-500 mr-3"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-lg font-semibold text-gray-800">Buyers</h4>
+                                <p class="text-gray-600">Fixed-price offtake agreements for stable supply</p>
+                            </div>
+                        </div>
+                        <div class="flex">
+                            <div class="flex-shrink-0 mt-1">
+                                <i class="fas fa-handshake text-green-500 mr-3"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-lg font-semibold text-gray-800">Investors</h4>
+                                <p class="text-gray-600">Transparent revenue-sharing models</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">Why AgriVision NG?</h2>
+                <p class="text-gray-600 max-w-3xl mx-auto">The smart way to invest in Nigerian agriculture</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-green-50 p-8 rounded-lg shadow-md text-center feature-card">
+                    <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-chart-line text-2xl text-green-600"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-3">Stable Supply</h3>
+                    <p class="text-gray-600">Eliminate price volatility by owning your source and controlling your supply chain</p>
+                </div>
+                <div class="bg-green-50 p-8 rounded-lg shadow-md text-center feature-card">
+                    <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-microchip text-2xl text-green-600"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-3">Tech-Driven</h3>
+                    <p class="text-gray-600">Real-time tracking with drone footage and AI analytics reduces risks of theft, pests, and poor yield</p>
+                </div>
+                <div class="bg-green-50 p-8 rounded-lg shadow-md text-center feature-card">
+                    <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-expand-arrows-alt text-2xl text-green-600"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-3">Scalable</h3>
+                    <p class="text-gray-600">Start with 1 hectare or scale up to 100+ hectares based on your business needs</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Target Clients -->
+    <section class="py-16 bg-green-600 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold mb-4">Who Should Invest?</h2>
+                <p class="text-green-100 max-w-3xl mx-auto">AgriVision NG is perfect for businesses and individuals seeking direct agricultural investment</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-lg text-center">
+                    <div class="w-16 h-16 bg-white bg-opacity-20 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-industry text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Food Processors & Mills</h3>
+                    <p class="text-green-100">Secure stable raw material supply for your processing operations</p>
+                </div>
+                <div class="bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-lg text-center">
+                    <div class="w-16 h-16 bg-white bg-opacity-20 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-store text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Supermarkets & Hotels</h3>
+                    <p class="text-green-100">Implement farm-to-table supply chains with traceable produce</p>
+                </div>
+                <div class="bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-lg text-center">
+                    <div class="w-16 h-16 bg-white bg-opacity-20 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-globe-africa text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Diaspora Investors</h3>
+                    <p class="text-green-100">Gain direct stakes in Nigerian agribusiness with remote management</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="max-w-3xl mx-auto text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">Contact Us Today</h2>
+                <p class="text-gray-600">Let's discuss how you can own your farm and control your supply</p>
+            </div>
+            <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                <div class="p-8">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                        <div>
+                            <h3 class="text-xl font-semibold text-gray-800 mb-6">Get in Touch</h3>
+                            <div class="space-y-4">
+                                <div class="flex items-start">
+                                    <div class="flex-shrink-0 mt-1">
+                                        <i class="fas fa-phone text-green-600 mr-3"></i>
+                                    </div>
+                                    <div>
+                                        <p class="font-semibold text-gray-800">Phone</p>
+                                        <p class="text-gray-600">+234 803 082 4742</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start">
+                                    <div class="flex-shrink-0 mt-1">
+                                        <i class="fas fa-envelope text-green-600 mr-3"></i>
+                                    </div>
+                                    <div>
+                                        <p class="font-semibold text-gray-800">Email</p>
+                                        <p class="text-gray-600">invest@agrivisionng.com</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start">
+                                    <div class="flex-shrink-0 mt-1">
+                                        <i class="fas fa-globe text-green-600 mr-3"></i>
+                                    </div>
+                                    <div>
+                                        <p class="font-semibold text-gray-800">Website</p>
+                                        <p class="text-gray-600">AgriVisionNG.com (under development)</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="mt-8">
+                                <h4 class="font-semibold text-gray-800 mb-3">We can discuss:</h4>
+                                <ul class="text-gray-600 space-y-2">
+                                    <li class="flex items-start">
+                                        <i class="fas fa-check text-green-500 mr-2 mt-1"></i>
+                                        Land options (location, size, crop suitability)
+                                    </li>
+                                    <li class="flex items-start">
+                                        <i class="fas fa-check text-green-500 mr-2 mt-1"></i>
+                                        Financing and insurance structuring
+                                    </li>
+                                    <li class="flex items-start">
+                                        <i class="fas fa-check text-green-500 mr-2 mt-1"></i>
+                                        Drafting MOUs for your specific needs
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div>
+                            <form class="space-y-6">
+                                <div>
+                                    <label for="name" class="block text-sm font-medium text-gray-700 mb-1">Name</label>
+                                    <input type="text" id="name" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500">
+                                </div>
+                                <div>
+                                    <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Email</label>
+                                    <input type="email" id="email" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500">
+                                </div>
+                                <div>
+                                    <label for="phone" class="block text-sm font-medium text-gray-700 mb-1">Phone</label>
+                                    <input type="tel" id="phone" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500">
+                                </div>
+                                <div>
+                                    <label for="message" class="block text-sm font-medium text-gray-700 mb-1">Message</label>
+                                    <textarea id="message" rows="4" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500"></textarea>
+                                </div>
+                                <button type="submit" class="btn-primary w-full rounded-md">Send Message</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div>
+                    <h3 class="text-2xl font-bold text-green-400 mb-4">AgriVision<span class="text-green-300">NG</span></h3>
+                    <p class="text-gray-300 mb-4">Own Your Farm, Control Your Supply</p>
+                    <p class="text-gray-400 text-sm">Empowering businesses and individuals to own and remotely manage farms in Nigeria.</p>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2 text-gray-300">
+                        <li><a href="#home" class="hover:text-green-300 transition">Home</a></li>
+                        <li><a href="#how-it-works" class="hover:text-green-300 transition">How It Works</a></li>
+                        <li><a href="#features" class="hover:text-green-300 transition">Features</a></li>
+                        <li><a href="#contact" class="hover:text-green-300 transition">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Contact Info</h4>
+                    <div class="space-y-2 text-gray-300">
+                        <p class="flex items-center">
+                            <i class="fas fa-phone mr-2"></i>
+                            +234 803 082 4742
+                        </p>
+                        <p class="flex items-center">
+                            <i class="fas fa-envelope mr-2"></i>
+                            invest@agrivisionng.com
+                        </p>
+                        <p class="flex items-center">
+                            <i class="fas fa-globe mr-2"></i>
+                            AgriVisionNG.com
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2023 AgriVision NG. All rights reserved. | Own Your Farm, Control Your Supply</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Form submission
+        document.querySelector('form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Thank you for your message! We will contact you soon.');
+            this.reset();
+        });
+    </script>
+</body>
+</html>
